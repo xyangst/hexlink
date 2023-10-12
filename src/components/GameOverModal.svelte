@@ -3,7 +3,7 @@
 	import InfoBox from "$components/InfoBox.svelte"
 	import { generateRandomBoard } from "$lib/game"
 	import { board, gameOver, moves } from "$lib/store"
-	$:visible = $gameOver
+	$:visible = !$gameOver
 </script>
 
 <div
@@ -11,8 +11,8 @@
 	class:visible
 >
 	<InfoBox class="px-5 py-10 w-80 gap-y-6 text-center text-3xl">
-		<div class="text-4xl">YOU WIN!!</div>
-		<div class="text-5xl">{$moves} moves</div>
+		<div class="text-4xl font-bold">you won.</div>
+		<div class="text-4xl">with {$moves} moves</div>
 		<Button
 			on:click={() => {
 				$gameOver = false
