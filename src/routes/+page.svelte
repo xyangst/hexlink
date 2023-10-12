@@ -8,6 +8,7 @@
 </script>
 
 <main class="flex flex-col max-w-6xl">
+	<p class="w-full text-center">hexlink</p>
 	<div class="flex justify-between text-3xl">
 		<p>{$moves}</p>
 		<div class="flex gap-2">
