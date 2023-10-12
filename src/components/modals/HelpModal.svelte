@@ -11,7 +11,7 @@
 >
 	<InfoBox class="px-5 py-10 w-80 gap-y-6">
         <h1 class="text-xl font-bold text-center">hexlink</h1>
-        <p>try to connect the colors in the least moves.</p>
+		<p>choose a color on the bottom row and try to connect the colors in the least moves.</p>
         if all blocks of the same color are connected (adjacent), you win
 	</InfoBox>
 </button>
