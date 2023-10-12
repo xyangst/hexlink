@@ -21,5 +21,5 @@
 
 		}}
 		style="background-color: {colors[tile.type]};"
-		class="w-14 h-14">
+		class="w-14 h-14 transition-colors ease-in-out duration-300">
 	</button>
