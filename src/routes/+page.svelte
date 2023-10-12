@@ -3,8 +3,9 @@
 	import GameOverModal from "$components/GameOverModal.svelte"
 	import Grid from "$components/Grid.svelte"
 	import HelpModal from "$components/HelpModal.svelte"
+	import { ghlink } from "$lib/config"
 	import { helpModal, moves, resetGame } from "$lib/store"
-	import { RotateCcw } from "lucide-svelte"
+	import { Github, RotateCcw } from "lucide-svelte"
 </script>
 
 <main class="flex flex-col max-w-6xl">
@@ -12,12 +13,14 @@
 	<div class="flex justify-between text-3xl">
 		<p>{$moves}</p>
 		<div class="flex gap-2">
-		<button on:click={resetGame}>
-			<RotateCcw/>
-		</button>
-		<button on:click={()=>{$helpModal=true}}>
-			?
-		</button>
+			<button on:click={resetGame}>
+				<RotateCcw/>
+			</button>
+			<button on:click={()=>{$helpModal=true}}>
+				?
+			</button>
+			<button><a href={ghlink}><Github/></a></button>
+
 	</div>
 	</div>
 	<div class="flex flex-col max-w-6xl p-2 bg-gray-800 gap-2">
