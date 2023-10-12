@@ -6,7 +6,7 @@
 
 
 </script>
-<div class="bg-crack">
+<div>
 	{#each $board as width}
 	<div>
 		{#each width as tile}
