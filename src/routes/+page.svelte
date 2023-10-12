@@ -2,6 +2,7 @@
 	import ColorSelect from "$components/ColorSelect.svelte"
 	import GameOverModal from "$components/GameOverModal.svelte"
 	import Grid from "$components/Grid.svelte"
+	import HelpModal from "$components/HelpModal.svelte"
 	import { helpModal, moves, resetGame } from "$lib/store"
 	import { RotateCcw } from "lucide-svelte"
 </script>
@@ -22,5 +23,6 @@
 		<Grid/>
 		<ColorSelect/>
 	</div>
+	<HelpModal/>
 	<GameOverModal/>
 </main>
