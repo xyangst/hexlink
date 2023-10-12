@@ -6,9 +6,13 @@
 
 
 </script>
+<div class="bg-crack p-2">
+	{#each $board as width, x}
+	<div>
+		{#each width as tile, y}
 
-{#each $board as width, x}
-	{#each width as tile, y}
-	 <Tile {tile}></Tile>
-{/each}
-{/each}
+		<Tile {tile}></Tile>
+		{/each}
+	</div>
+	{/each}
+</div>

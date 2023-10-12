@@ -3,7 +3,7 @@ import { height, width } from "$lib/config"
 
 export class Tile {
 	id = Math.random()
-	type: null | number = random(0, 5)
+	type: null | number = Math.floor(random(0, 5))
 }
 export function generateRandomBoard() {
 	const board: Tile[][] = []
