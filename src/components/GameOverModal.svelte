@@ -1,8 +1,7 @@
 <script lang="ts">
 	import Button from "$components/Button.svelte"
 	import InfoBox from "$components/InfoBox.svelte"
-	import { generateRandomBoard } from "$lib/game"
-	import { board, gameOver, moves } from "$lib/store"
+	import { gameOver, moves, resetGame } from "$lib/store"
 	$:visible = $gameOver
 </script>
 
@@ -15,9 +14,7 @@
 		<div class="text-4xl">with {$moves} moves</div>
 		<Button
 			on:click={() => {
-				$gameOver = false
-				$moves = 0
-				$board = generateRandomBoard()
+				resetGame()
 			}}>Play Again</Button
 		>
 	</InfoBox>
