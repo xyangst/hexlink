@@ -8,6 +8,6 @@
 
 <style>
 	main {
-		@apply bg-gray-900 flex overflow-hidden items-center h-screen justify-center bg-cover bg-center;
+		@apply bg-gray-900 flex min-h-screen justify-center;
 	}
 </style>
