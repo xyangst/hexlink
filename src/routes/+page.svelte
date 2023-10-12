@@ -5,7 +5,7 @@
 	let showModal = false
 </script>
 
-<main class="flex flex-col h-100 max-w-6xl">
+<main class="flex flex-col max-w-6xl">
 	<Grid/>
 	<GameOverModal bind:score={$score} bind:visible={showModal} />
 </main>

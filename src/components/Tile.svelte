@@ -5,13 +5,11 @@
 </script>
 
 
-{#if tile.type !== null}
 	<button
 		on:click
-		class="p-1 w-14 h-14"
+		class="w-14 h-14"
 		><div class="tile tile{tile.type}"/>
 	</button>
-{/if}
 
 <style>
 	.tile1 {
