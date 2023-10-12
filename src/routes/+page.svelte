@@ -9,9 +9,9 @@
 </script>
 
 <main class="flex flex-col max-w-6xl">
-	<p class="w-full text-center">hexlink</p>
+	<p class="w-full text-center text-3xl">hexlink</p>
 	<div class="flex justify-between text-3xl">
-		<p>{$moves}</p>
+		<p>{($moves < 10 ? `0${$moves}` : $moves)}</p>
 		<div class="flex gap-2">
 			<button on:click={resetGame}>
 				<RotateCcw/>
