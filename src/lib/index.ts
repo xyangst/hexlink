@@ -4,6 +4,5 @@ import { twMerge } from "tailwind-merge"
 export function cn(...inputs: ClassValue[]) {
 	return twMerge(clsx(inputs))
 }
-export function random(min: number, max: number) {
-	return min + Math.random() * (max - min)
-}
+export const random = (min: number, max: number) => min + Math.random() * (max - min)
+export const randomInt = (min: number, max: number) => Math.floor(random(min, max) + 1)
