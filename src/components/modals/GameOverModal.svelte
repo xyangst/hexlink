@@ -1,8 +1,8 @@
 <script lang="ts">
 	import Button from "$components/Button.svelte"
 	import InfoBox from "$components/InfoBox.svelte"
-	import { gameOver, moves, resetGame } from "$lib/store"
-	$:visible = $gameOver
+	import { modalState, moves, resetGame } from "$lib/store"
+	$:visible = $modalState == "gameover"
 </script>
 
 <div

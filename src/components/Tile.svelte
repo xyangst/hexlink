@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { colors } from "$lib/config"
 	import { checkIfDone, getUniqueNumbers, type Tile } from "$lib/game"
-	import { board, gameOver, moves, selected } from "$lib/store"
+	import { board, modalState, moves, selected } from "$lib/store"
 
 	export let tile: Tile
 </script>
@@ -16,7 +16,7 @@
 			$moves+=1
 
 			if(weWin==getUniqueNumbers($board)){
-				gameOver.set(true)
+				modalState.set("gameover")
 			}
 
 		}}

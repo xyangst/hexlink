@@ -1,10 +1,10 @@
 <script lang="ts">
 	import ColorSelect from "$components/ColorSelect.svelte"
-	import GameOverModal from "$components/GameOverModal.svelte"
 	import Grid from "$components/Grid.svelte"
-	import HelpModal from "$components/HelpModal.svelte"
+	import GameOverModal from "$components/modals/GameOverModal.svelte"
+	import HelpModal from "$components/modals/HelpModal.svelte"
 	import { ghlink } from "$lib/config"
-	import { helpModal, moves, resetGame } from "$lib/store"
+	import { modalState, moves, resetGame } from "$lib/store"
 	import { Github, RotateCcw } from "lucide-svelte"
 </script>
 
@@ -16,7 +16,7 @@
 			<button on:click={resetGame}>
 				<RotateCcw/>
 			</button>
-			<button on:click={()=>{$helpModal=true}}>
+			<button on:click={()=>{$modalState='help'}}>
 				?
 			</button>
 			<button><a href={ghlink}><Github/></a></button>
