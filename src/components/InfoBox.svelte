@@ -7,7 +7,7 @@
 <div
 	class={cn(
 		className,
-		"rounded-3xl shadow-md border-4 border-gray-50 bg-gradient-to-b bg-gray-800 px-5 py-2 -tracking-tighter"
+		"border-4 border-gray-400 bg-gray-900 px-5 py-2 -tracking-tighter"
 	)}
 >
 	<slot />

@@ -8,8 +8,8 @@
 	on:click
 	class={cn(
 		className,
-		`hover:bg-gray-900 uppercase rounded-3xl shadow-md border-4 px-5 py-2 -tracking-tighter border-gray-50
-        bg-gray-950`
+		`shadow-md border-4 px-5 py-2 -tracking-tighter border-gray-400
+        bg-gray-800 hover:border-gray-600`
 	)}
 >
 	<slot />

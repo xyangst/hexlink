@@ -10,8 +10,8 @@
 	class:visible
 >
 	<InfoBox class="px-5 py-10 w-80 gap-y-6 text-center text-3xl">
-		<div class="text-4xl font-bold">you won.</div>
-		<div class="text-4xl">with {$moves} moves</div>
+		<div class="text-4xl">you won🎉🎉</div>
+		<div class="text-4xl">{$moves} moves</div>
 		<Button
 			on:click={() => {
 				resetGame()
