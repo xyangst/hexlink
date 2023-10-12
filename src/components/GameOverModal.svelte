@@ -1,20 +1,9 @@
 <script lang="ts">
-	import { generateRandomBoard } from "$lib/game"
-	import { board } from "$lib/store"
 	import Button from "$components/Button.svelte"
 	import InfoBox from "$components/InfoBox.svelte"
-	export let visible = false
-	export let score: number
-	let bestScore = !isNaN(Number(localStorage.getItem("high")))
-		? Number(localStorage.getItem("high"))
-		: 0
-	$: () => {
-		const newBest = Math.max(score, bestScore)
-		if (newBest > bestScore) {
-			localStorage.setItem("high", String(newBest))
-			bestScore = newBest
-		}
-	}
+	import { generateRandomBoard } from "$lib/game"
+	import { board, gameOver, moves } from "$lib/store"
+	$:visible = $gameOver
 </script>
 
 <div
@@ -22,13 +11,13 @@
 	class:visible
 >
 	<InfoBox class="px-5 py-10 w-80 gap-y-6 text-center text-3xl">
-		<div class="text-4xl">Game Over</div>
-		<div class="text-5xl">{score}</div>
-		<div class="">Best: {bestScore}</div>
+		<div class="text-4xl">YOU WIN!!</div>
+		<div class="text-5xl">{$moves} moves</div>
 		<Button
 			on:click={() => {
-				visible = false
-				board.set(generateRandomBoard())
+				$gameOver = false
+				$moves = 0
+				$board = generateRandomBoard()
 			}}>Play Again</Button
 		>
 	</InfoBox>

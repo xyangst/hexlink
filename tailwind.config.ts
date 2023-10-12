@@ -7,8 +7,8 @@ export default {
 			crack: "#0aa400",
 			crack2: "#088200",
 			black: colors.black,
-			white: colors.white,
-			orange: colors.orange
+			orange: colors.orange,
+			gray: colors.stone
 		},
 		extend: {}
 	},
