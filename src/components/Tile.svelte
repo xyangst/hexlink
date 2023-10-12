@@ -9,6 +9,7 @@
 
 	<button
 		on:click={()=>{
+			if(tile.type=$selected)return
 			tile.type = $selected
 			const weWin = checkIfDone($board)
 			console.log(weWin)

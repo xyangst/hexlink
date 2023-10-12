@@ -3,7 +3,7 @@
 	import InfoBox from "$components/InfoBox.svelte"
 	import { generateRandomBoard } from "$lib/game"
 	import { board, gameOver, moves } from "$lib/store"
-	$:visible = !$gameOver
+	$:visible = $gameOver
 </script>
 
 <div
