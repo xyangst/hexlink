@@ -19,7 +19,7 @@
 			<button on:click={()=>{$modalState='help'}}>
 				?
 			</button>
-			<button><a href={ghlink}><Github/></a></button>
+			<button><a target="_blank" href={ghlink}><Github/></a></button>
 
 	</div>
 	</div>
